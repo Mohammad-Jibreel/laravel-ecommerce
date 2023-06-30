@@ -7,7 +7,7 @@
 
     <!-- Cart Button -->
     <div class="cart-button">
-        <a href="#" id="rightSideCart"><img src="~/assetsfront/img/core-img/bag.svg" alt=""> <span>3</span></a>
+        <a href="#" id="rightSideCart"><img src="{{asset('assetsfront/img/core-img/bag.svg')}}" alt=""> <span>3</span></a>
     </div>
 
     <div class="cart-content d-flex">
@@ -17,7 +17,7 @@
             <!-- Single Cart Item -->
             <div class="single-cart-item">
                 <a href="#" class="product-image">
-                    <img src="~/assetsfront/img/product-img/product-1.jpg" class="cart-thumb" alt="">
+                    <img src="{{asset('assetsfront/img/product-img/product-1.jpg')}}" class="cart-thumb" alt="">
                     <!-- Cart Item Desc -->
                     <div class="cart-item-desc">
                         <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
@@ -33,7 +33,7 @@
             <!-- Single Cart Item -->
             <div class="single-cart-item">
                 <a href="#" class="product-image">
-                    <img src="~/assetsfront/img/product-img/product-2.jpg" class="cart-thumb" alt="">
+                    <img src="{{asset('assetsfront/img/product-img/product-2.jpg')}}" class="cart-thumb" alt="">
                     <!-- Cart Item Desc -->
                     <div class="cart-item-desc">
                         <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
@@ -49,7 +49,7 @@
             <!-- Single Cart Item -->
             <div class="single-cart-item">
                 <a href="#" class="product-image">
-                    <img src="~/assetsfront/img/product-img/product-3.jpg" class="cart-thumb" alt="">
+                    <img src="{{asset('assetsfront/img/product-img/product-3.jpg')}}" class="cart-thumb" alt="">
                     <!-- Cart Item Desc -->
                     <div class="cart-item-desc">
                         <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
@@ -86,9 +86,9 @@
     <!-- Single Product Thumb -->
     <div class="single_product_thumb clearfix">
         <div class="product_thumbnail_slides owl-carousel">
-            <img src="~/assetsfront/img/product-img/product-big-1.jpg" alt="">
-            <img src="~/assetsfront/img/product-img/product-big-2.jpg" alt="">
-            <img src="~/assetsfront/img/product-img/product-big-3.jpg" alt="">
+            <img src="{{asset('assetsfront/img/product-img/product-big-1.jpg')}}" alt="">
+            <img src="{{asset('assetsfront/img/product-img/product-big-2.jpg')}}" alt="">
+            <img src="{{asset('assetsfront/img/product-img/product-big-3.jpg')}}" alt="">
         </div>
     </div>
 

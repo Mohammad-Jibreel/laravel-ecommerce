@@ -1,6 +1,6 @@
 @extends('Admin.layout')
 @section('content')
-<div class="row">
+<div class="row mt-auto">
 
 <div class="col">
     <h5 class="card-title fw-semibold mb-4"></h5>
@@ -245,5 +245,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection
