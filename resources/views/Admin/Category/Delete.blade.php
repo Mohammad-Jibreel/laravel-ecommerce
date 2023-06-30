@@ -1,9 +1,5 @@
-﻿@model Category
-
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Delete Category";
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 <div class="container-fluid">
     <div class="container-fluid">
@@ -24,7 +20,7 @@
                                 <label asp-for="Name" class="form-label"></label>
                                 <input asp-for="Name" disabled class="form-control" id="Name">
                             </div>
-                           
+
                             <a asp-action="Index" asp-asp-controller="Category" asp-area="Admin" class="btn btn-success">Back</a>
                             <button type="submit" class="btn btn-primary" asp-route-id="Id">Delete</button>
 
@@ -36,3 +32,5 @@
         </div>
     </div>
 </div>
+
+@endsection

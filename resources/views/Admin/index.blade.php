@@ -1,8 +1,5 @@
-@extends('Admin.layout.layout')
-
+@extends('Admin.layout')
 @section('content')
-
-
 <div class="row">
 
 <div class="col">
@@ -14,7 +11,7 @@
         </div>
                 <div class="card-body bg-light-secondary bg-outline-secondary">
             <h5 class="card-title">Total of Product</h5>
-            <p class="card-text"> </p>
+            <p class="card-text"> @Model.ProductCount</p>
 
         </div>
     </div>
@@ -29,7 +26,7 @@
         </div>
                 <div class="card-body bg-light-danger bg-outline-danger">
                 <h5 class="card-title">Total of Category</h5>
-            <p class="card-text"></p>
+            <p class="card-text"> @Model.CategoryCount</p>
 
         </div>
     </div>
@@ -248,8 +245,5 @@
         </div>
     </div>
 </div>
-
-
-
 
 @endsection

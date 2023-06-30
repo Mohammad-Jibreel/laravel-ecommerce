@@ -1,9 +1,5 @@
-﻿@model SubCategory
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Create SubCategory";
-    var categories = ViewBag.subCategory as List<SubCategory>;
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 
 
@@ -38,7 +34,7 @@
 
 
 
- 
+
 
                             <div class="m-2 ">
 
@@ -50,13 +46,11 @@
                         </form>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     </div>
 </div>
 
 
-@section Scripts{
-    <partial name="_ValidationScriptsPartial" />
-}
+@endsection

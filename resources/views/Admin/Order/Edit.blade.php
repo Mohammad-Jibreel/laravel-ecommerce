@@ -1,10 +1,5 @@
-﻿
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Edit Order";
-
-}
-
+﻿@extends('Admin.layout')
+@section('content')
 <div class="container-fluid">
     <div class="container-fluid">
         <div class="card">
@@ -39,3 +34,5 @@
         </div>
     </div>
 </div>
+
+@endsection

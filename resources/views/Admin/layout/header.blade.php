@@ -52,7 +52,7 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-area="Admin" asp-controller="Admin" asp-action="Index" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.admin')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -64,7 +64,7 @@
                             <span class="hide-menu">UI COMPONENTS</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Product" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.product.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-brand-producthunt"></i>
                                 </span>
@@ -72,7 +72,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Category" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.category.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-category"></i>
                                 </span>
@@ -81,7 +81,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="SubCategory" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.subCategory.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-category"></i>
                                 </span>
@@ -89,7 +89,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Order" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.order.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-aperture"></i>
 
@@ -98,7 +98,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-area="Admin" asp-action="Index" asp-controller="Payment" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.payment.index')}}"  aria-expanded="false">
                                 <span>
                                     <i class="ti ti-credit-card"></i>
                                 </span>
@@ -113,7 +113,7 @@
                             <span class="hide-menu">Features</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Size" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.size.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-dimensions"></i>
                                 </span>
@@ -121,7 +121,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Color" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.color.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-color-filter"></i>
                                 </span>
@@ -130,7 +130,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-area="Admin" asp-controller="OrderDeliveryDay" asp-action="Index" aria-expanded="false">
+                            <a class="sidebar-link"  aria-expanded="false">
                                 <span>
                                     <i class="ti ti-truck"></i>
                                 </span>
@@ -139,7 +139,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="Rating" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('admin.rating.index')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-stars"></i>
                                 </span>
@@ -159,7 +159,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-action="Index" asp-area="Admin" asp-controller="Biller" aria-expanded="false">
+                            <a class="sidebar-link"  aria-expanded="false">
                                 <span>
                                     <i class="ti ti-file-invoice"></i>
                                 </span>
@@ -189,7 +189,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" asp-action="Index" asp-area="Admin" asp-controller="User" aria-expanded="false">
+                            <a class="sidebar-link"  aria-expanded="false">
                                 <span>
                                     <i class="ti ti-users"></i>
                                 </span>

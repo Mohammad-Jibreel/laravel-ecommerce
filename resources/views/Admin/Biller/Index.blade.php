@@ -1,4 +1,4 @@
-﻿@extends('Admin.layout.layout')
+﻿@extends('Admin.layout')
 @section('content')
 <div class="col d-flex align-items-stretch">
     <div class="card w-100">

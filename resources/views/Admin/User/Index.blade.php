@@ -1,8 +1,5 @@
-﻿@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "User";
-
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 
 
@@ -197,3 +194,5 @@
 
 
 </div>
+
+@endsection

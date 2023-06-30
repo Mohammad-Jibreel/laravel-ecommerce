@@ -1,11 +1,5 @@
-﻿
-@model Category
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Edit Category";
-    var categories = ViewBag.Categories as List<Category>;
-
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 <div class="container-fluid">
     <div class="container-fluid">
@@ -28,7 +22,7 @@
                                 <span asp-validation-for="Name" class="text-danger"></span>
 
                             </div>
-                           
+
 
                             <div class="form-group">
                                 <label class="form-label">Cateogry</label>
@@ -56,6 +50,4 @@
     </div>
 </div>
 
-@section Scripts{
-    <partial name="_ValidationScriptsPartial" />
-}
+@endsection

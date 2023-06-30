@@ -1,29 +1,18 @@
-﻿@model List<SubCategory>
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "SubCategory";
-}
-
-@if (TempData.ContainsKey("success"))
-{
-    <div class="alert alert-success">@TempData["success"]</div>
-}
-
+﻿
+@extends('Admin.layout')
+@section('content')
 <div class="col d-flex align-items-stretch">
     <div class="card w-100">
         <div class="card-body p-4">
 
-            @if (Model.Count <= 0)
-            {
+
                 <div class="d-flex flex-row-reverse">
                     <a class="btn btn-primary p-2" asp-action="Create" asp-area="Admin" asp-controller="SubCategory">
                         <i class="ti ti-plus"></i>Add SubCategory
                     </a>
                 </div>
                 <div class="alert alert-info mt-2">No Data Found. Add SubCategory now</div>
-            }
-            else
-            {
+
 
                 <div class="d-flex flex-row-reverse">
                     <a class="btn btn-primary p-2" asp-action="Create" asp-area="Admin" asp-controller="SubCategory">
@@ -50,7 +39,7 @@
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Category Name</h6>
                                 </th>
-                              
+
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Created</h6>
                                 </th>
@@ -63,8 +52,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model)
-                            {
+
                                 <tr>
                                     <td class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">@item.Id</h6>
@@ -102,9 +90,11 @@
                         </ul>
                     </nav>
                 </div>
-            }
+
         </div>
     </div>
 </div>
 
 
+
+@endsection

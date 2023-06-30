@@ -1,18 +1,15 @@
-﻿@model List<Product>
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Prdouct";
-}
+﻿@extends('Admin.layout')
+@section('content')
 
-@if (TempData.ContainsKey("success"))
+{{-- @if (TempData.ContainsKey("success"))
 {
     <div class="alert alert-success">@TempData["success"]</div>
-}
+} --}}
 
 <div class="col d-flex align-items-stretch">
     <div class="card w-100">
         <div class="card-body p-4">
-
+{{--
             @if (Model.Count <= 0)
             {
                 <div class="d-flex flex-row-reverse">
@@ -23,7 +20,7 @@
                 <div class="alert alert-info mt-2">No Data Found. Add Prdouct now</div>
             }
             else
-            {
+            { --}}
 
                 <div class="d-flex flex-row-reverse">
                     <a class="btn btn-primary p-2" asp-action="Create" asp-area="Admin" asp-controller="Prdouct">
@@ -75,32 +72,32 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model)
-                            {
+                            {{-- @foreach (var item in Model)
+                            { --}}
                                 <tr>
                                     <td class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">@item.Id</h6>
+                                        <h6 class="fw-semibold mb-0">Id</h6>
                                     </td>
-                                    <td class="border-bottom-0">@item.Name</td>
-                                    <td class="border-bottom-0">@item.Description</td>
-                                    <td class="border-bottom-0">@item.Price</td>
-                                    <td class="border-bottom-0">@item.SubCategory.Name</td>
-                                    <td class="border-bottom-0">@item.Color.value</td>
-                                    <td class="border-bottom-0">@item.Size.value</td>
-                                    <td class="border-bottom-0">@item.Created.ToShortDateString()</td>
-                                    <td class="border-bottom-0">@item.Updated.ToShortDateString()</td>
+                                    <td class="border-bottom-0">Name</td>
+                                    <td class="border-bottom-0">Description</td>
+                                    <td class="border-bottom-0">Price</td>
+                                    <td class="border-bottom-0">SubCategory.Name</td>
+                                    <td class="border-bottom-0">Color.value</td>
+                                    <td class="border-bottom-0">Size.value</td>
+                                    <td class="border-bottom-0">Created.ToShortDateString</td>
+                                    <td class="border-bottom-0">Updated.ToShortDateString</td>
                                     <td class="border-bottom-0">
                                         <div class="d-flex align-items-center">
-                                            <a class="btn btn-success m-1" asp-action="Edit" asp-area="Admin" asp-route-id="@item.Id" asp-controller="Prdouct">
+                                            <a class="btn btn-success m-1" >
                                                 <i class="ti ti-edit"></i>
                                             </a>
-                                            <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id="@item.Id" asp-area="Admin" asp-controller="Prdouct">
+                                            <a class="btn btn-danger m-1" >
                                                 <i class="ti ti-trash"></i>
                                             </a>
                                         </div>
                                     </td>
                                 </tr>
-                            }
+                            {{-- } --}}
                         </tbody>
                     </table>
 
@@ -118,9 +115,12 @@
                         </ul>
                     </nav>
                 </div>
-            }
+
         </div>
     </div>
 </div>
 
 
+
+
+@endsection

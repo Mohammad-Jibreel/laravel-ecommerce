@@ -1,15 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ColorController;
-use App\Http\Controllers\SizeController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\SubcategoryController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\RatingController;
-use App\Http\Controllers\BillerController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\ColorController;
+use App\Http\Controllers\Admin\SizeController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SubcategoryController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\RatingController;
+use App\Http\Controllers\Admin\BillerController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\WishlistController;
+use App\Http\Controllers\Admin\PaymentController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\User\ContactController;
+use App\Http\Controllers\User\UserController as User;
+
+
 
 
 /*
@@ -24,45 +32,36 @@ use App\Http\Controllers\UserController;
 */
 
 
-Route::get('/Cus', function () {
-    return view('Customer.index');
-});
-Route::get('/admin', function () {
-    return view('Admin.index');
-});
+// Route::get('/customer', function () {
+//     return view('Customer.index');
+// });
 
-
-Route::prefix('customer')->group(function () {
-
-Route::get('/contact', function () {
-return view('Customer.Home.Contact');
-});
-
-Route::get('/privacy', function () {
-    return view('Customer.Home.Privacy');
-
-});
-
-Route::get('/checkout', function () {
-    return view('Customer.Checkout.Index');
-    });
-
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+     Route::get('/', [AdminController::class,'index'])->name('admin');
+        Route::resource('color', ColorController::class);
+        Route::resource('size', SizeController::class);
+        Route::resource('category', CategoryController::class);
+        Route::resource('subCategory', SubcategoryController::class);
+        Route::resource('product', ProductController::class);
+        Route::resource('payment', PaymentController::class);
+        Route::resource('rating', RatingController::class);
+        Route::resource('biller', BillerController::class);
+        Route::resource('user', UserController::class);
+        Route::resource('wishlist', WishlistController::class);
+        Route::resource('order', OrderController::class);
 
 });
 
+// User Routes
+Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
+    Route::get('/', [User::class,'index'])->name('home');
+    Route::get('checkout', [CheckOutController::class,'index'])->name('checkout');
+    Route::get('contact', [ContactController::class,'index'])->name('contact');
+    Route::get('privacy', [ContactController::class,'privacy']);
+    Route::get('product', [ProductController::class,'index'])->name('product');
+    Route::get('shop', [User::class,'shop'])->name('shop');
 
 
-Route::prefix('admin')->group(function () {
-
-    Route::resource('color', ColorController::class);
-    Route::resource('size', SizeController::class);
-    Route::resource('category', CategoryController::class);
-    Route::resource('subCategory', SubcategoryController::class);
-    Route::resource('product', ProductController::class);
-    Route::resource('payment', OrderController::class);
-    Route::resource('rating', RatingController::class);
-    Route::resource('biller', BillerController::class);
-    Route::resource('user', UserController::class);
 
 });
 

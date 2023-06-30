@@ -1,9 +1,5 @@
-﻿@model ProductVM
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Create Product";
-
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 <div class="container-fluid">
     <div class="container-fluid">
@@ -34,7 +30,7 @@
                                 <input asp-for="product.quantity" class="form-control" id="product.quantity" aria-describedby="product.quantity">
                                 <span asp-validation-for="product.quantity" id="product.quantity" class="form-text text-danger"></span>
                             </div>
-                            
+
                             @*<div class="mb-3">
                             <select asp-for="@Model.product.SubCategory" asp-items="@Model.SubCategoryList"  type="text" class="form-select" id="">
                             <option disabled selected>--Select Category--</option>
@@ -94,7 +90,7 @@
                             </div>
 
 
-                          
+
 
                            @* <div class="mb-3">
                                 <select asp-for="@Model.product.SubCategory.Category" asp-items="@Model.CategoryList" type="text" class="form-select" id="">
@@ -122,12 +118,10 @@
                         </form>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     </div>
 </div>
 
-@section Scripts{
-    <partial name="_ValidationScriptsPartial" />
-}
+@endsection

@@ -1,9 +1,5 @@
-﻿
-
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Delete OrderDeliveryDay";
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 <div class="container-fluid">
     <div class="container-fluid">
@@ -38,3 +34,5 @@
         </div>
     </div>
 </div>
+
+@endsection

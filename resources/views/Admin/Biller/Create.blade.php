@@ -1,10 +1,5 @@
-﻿
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Create Biller";
-
-}
-
+﻿@extends('Admin.layout')
+@section('content')
 <div class="container-fluid">
     <div class="container-fluid">
         <div class="card">
@@ -29,8 +24,10 @@
                         </form>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     </div>
 </div>
+
+@endsection

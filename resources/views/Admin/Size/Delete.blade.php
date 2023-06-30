@@ -1,9 +1,5 @@
-﻿@model Size
-
-@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Delete Size";
-}
+﻿@extends('Admin.layout')
+@section('content')
 
 <div class="container-fluid">
     <div class="container-fluid">
@@ -40,3 +36,5 @@
         </div>
     </div>
 </div>
+
+@endsection

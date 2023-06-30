@@ -1,10 +1,5 @@
-﻿@{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "Payment";
-
-}
-
-
+﻿@extends('Admin.layout')
+@section('content')
 
 
 <div class="col d-flex align-items-stretch">
@@ -197,3 +192,4 @@
 
 
 </div>
+@endsection
