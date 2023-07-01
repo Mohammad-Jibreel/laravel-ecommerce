@@ -33,10 +33,6 @@ use App\Http\Controllers\User\ProductController as product;
 */
 
 
-// Route::get('/customer', function () {
-//     return view('Customer.index');
-// });
-
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
      Route::get('/', [AdminController::class,'index'])->name('admin');
         Route::resource('color', ColorController::class);
@@ -53,9 +49,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 });
 
+Route::get('/', [User::class,'index'])->name('user.home');
+
 // User Routes
 Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
-    Route::get('/', [User::class,'index'])->name('home');
     Route::get('checkout', [CheckOutController::class,'index'])->name('checkout');
     Route::get('contact', [ContactController::class,'index'])->name('contact');
     Route::get('privacy', [ContactController::class,'privacy']);
