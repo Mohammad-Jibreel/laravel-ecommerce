@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Biller extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+
+    public function orders()
+    {
+        return $this->hasMany(order::class);
+    }
 }

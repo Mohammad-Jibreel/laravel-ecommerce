@@ -8,4 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function biller()
+    {
+        return $this->belongsTo(Biller::class);
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class)->withPivot('quantity');
+    }
+
+    public function payment()
+    {
+        return $this->hasOne(Payment::class);
+    }
 }
